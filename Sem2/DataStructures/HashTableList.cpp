@@ -11,7 +11,8 @@
 #include <vector>
 #include <algorithm>
 
-class Node {
+class Node 
+{
 public:
 	std::string data;
 	int key;
@@ -20,11 +21,13 @@ public:
 	Node(int key, std::string data) : key(key), data(data), next(nullptr) {}
 };
 
-class arrayStack {
+class ArrayStack 
+{
 private:
 	Node* top;
 public:
-	arrayStack() {
+	ArrayStack() 
+    {
         top = nullptr; 
     }
 	void push(int key, std::string value); 
@@ -33,14 +36,17 @@ public:
 	void remove(int key);
 };
 
-void arrayStack::push(int key, std::string value) {
+void ArrayStack::push(int key, std::string value) 
+{
     Node* newNode = new Node(key, value);
     newNode->next = NULL;
     newNode->prev = NULL;
 
-    if (top == NULL) {
+    if (top == NULL) 
+    {
         top = newNode;
-    } else {
+    } else 
+    {
         Node* temp = top;
         while (temp->next != NULL)
             temp = temp->next;
@@ -49,32 +55,43 @@ void arrayStack::push(int key, std::string value) {
     }
 }
 
-std::string arrayStack::searchKey(int key) {
-    if (top == nullptr) return "Not Found";
+std::string ArrayStack::searchKey(int key)
+{
+    if (top == nullptr) 
+        return "Not Found";
     Node* node = top;
 
-    while (node->key != key) {
-        if (node == nullptr) return "0";
+    while (node->key != key) 
+    {
+        if (node == nullptr) 
+            return "0";
     }
     return std::to_string(node->key);
 }
 
-std::string arrayStack::searchValue(int key)
+std::string ArrayStack::searchValue(int key)
 {
-    if (top == nullptr) return "Not Found";
+    if (top == nullptr) 
+        return "Not Found";
     Node* node = top;
 
-    while (node->key != key) {
-        if (node == nullptr) return "0";
+    while (node->key != key) 
+    {
+        if (node == nullptr) 
+            return "0";
     }
     return node->data;
 }
 
-void arrayStack::remove(int key) {
-    if (top != NULL) {
-        if (top->next == NULL) {
+void ArrayStack::remove(int key) 
+{
+    if (top != NULL) 
+    {
+        if (top->next == NULL) 
+        {
             top = NULL;
-        } else {
+        } else 
+        {
             Node* temp = top;
             while (temp->next->next != NULL)
                 temp = temp->next;
@@ -85,14 +102,16 @@ void arrayStack::remove(int key) {
     }
 }
 
-class HashTableList : public arrayStack {
+class HashTableList : public ArrayStack 
+{
 private:
 	int capacity;
 	int size;
-	arrayStack* arr = new arrayStack[capacity];
+	ArrayStack* arr = new ArrayStack[capacity];
 public:
 	HashTableList(int capacity) :size(0), capacity(capacity) {}
-	~HashTableList() {
+	~HashTableList() 
+    {
 		delete[] arr;
 	}
 	int hashFunc(int key);
@@ -102,28 +121,33 @@ public:
 	std::string getKey(int key);
 };
 
-int HashTableList::hashFunc(int key) {
+int HashTableList::hashFunc(int key) 
+{
     return abs(key % capacity);
 }
 
-void HashTableList::insert(int key, std::string value) {
+void HashTableList::insert(int key, std::string value) 
+{
     int index = hashFunc(key);
     ++size;
     return  arr[index].push(key, value);
 }
 
-std::string HashTableList::getValue(int key) {
+std::string HashTableList::getValue(int key) 
+{
     int index = hashFunc(key);
     return arr[index].searchValue(key);
 }
 
-void HashTableList::erase(int key) {
+void HashTableList::erase(int key) 
+{
     int index = hashFunc(key);
     arr[index].remove(key);
     --size;
 }
 
-std::string HashTableList::getKey(int key) {
+std::string HashTableList::getKey(int key) 
+{
     int index = hashFunc(key);
     return arr[index].searchKey(key);
 }
@@ -134,8 +158,6 @@ int main() {
     hashTable.insert(5, "Value 1");
     hashTable.insert(15, "Value 2");
     hashTable.insert(25, "Value 3");
-
-    // std::cout << "Value at key 5: " << hashTable.getValue(5) << std::endl;
 
     std::cout << "Value at key 25: " << hashTable.getValue(25) << std::endl;
 

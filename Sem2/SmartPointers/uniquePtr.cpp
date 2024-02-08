@@ -31,22 +31,26 @@ public:
     bool operator==(std::nullptr_t) const;
 
 	// Move assignment operator
-	uniquePtr& operator=(uniquePtr&& other) noexcept {
+	uniquePtr& operator=(uniquePtr&& other) noexcept 
+	{
 		reset(other.release());
 		deleter_ = std::move(other.deleter_);
 		return *this;
 	}
 
-    ~uniquePtr() noexcept {
+    ~uniquePtr() noexcept 
+	{
 		reset();
 	}
 
-	friend std::ostream& operator<<(std::ostream& os, const uniquePtr<T>& p) {
+	friend std::ostream& operator<<(std::ostream& os, const uniquePtr<T>& p) 
+	{
 		os << p.ptr_;
 		return os;
 	}
 
-	explicit operator bool() const noexcept {
+	explicit operator bool() const noexcept 
+	{
 		return ptr_ != nullptr;
 	}
 
@@ -56,14 +60,16 @@ private:
 };
 
 template <class T, class Del>
-T* uniquePtr<T, Del>::release() noexcept {
+T* uniquePtr<T, Del>::release() noexcept 
+{
 		T* ptr = ptr_;
 		ptr_ = nullptr;
 		return ptr;
 }
 
 template <class T, class Del>
-void uniquePtr<T, Del>::reset(T* ptr) noexcept {
+void uniquePtr<T, Del>::reset(T* ptr) noexcept 
+{
     if (ptr_ != ptr) {
         deleter_(ptr_);
         ptr_ = ptr;
@@ -71,49 +77,58 @@ void uniquePtr<T, Del>::reset(T* ptr) noexcept {
 }
 
 template <class T, class Del>
-void uniquePtr<T, Del>::swap(uniquePtr<T, Del>& other) noexcept {
+void uniquePtr<T, Del>::swap(uniquePtr<T, Del>& other) noexcept 
+{
     std::swap(ptr_, other.ptr_);
     std::swap(deleter_, other.deleter_);
 }
 
 template <class T, class Del>
-T* uniquePtr<T, Del>::get() const noexcept {
+T* uniquePtr<T, Del>::get() const noexcept 
+{
     return ptr_;
 }
 
 template <class T, class Del>
-Del& uniquePtr<T, Del>::get_deleter() {
+Del& uniquePtr<T, Del>::get_deleter()
+{
     return deleter_;
 }
 
 template <class T, class Del>
-const Del& uniquePtr<T, Del>::get_deleter() const {
+const Del& uniquePtr<T, Del>::get_deleter() const 
+{
     return deleter_;
 }
 
 template <class T, class Del>
-T& uniquePtr<T, Del>::operator*() const noexcept {
+T& uniquePtr<T, Del>::operator*() const noexcept 
+{
     return *ptr_;
 }
 
 template <class T, class Del>
-T* uniquePtr<T, Del>::operator->() const noexcept {
+T* uniquePtr<T, Del>::operator->() const noexcept 
+{
     return ptr_;
 }
 
 template <class T, class Del>
-bool uniquePtr<T, Del>::operator!=(std::nullptr_t) const {
+bool uniquePtr<T, Del>::operator!=(std::nullptr_t) const 
+{
     return ptr_ == nullptr;
 }
 
 template <class T, class Del>
-bool uniquePtr<T, Del>::operator==(std::nullptr_t) const {
+bool uniquePtr<T, Del>::operator==(std::nullptr_t) const 
+{
     return ptr_ == nullptr;
 }
 
 
 template <class T, class D>
-class uniquePtr<T[], D> {
+class uniquePtr<T[], D> 
+{
 public:
 	constexpr uniquePtr() noexcept : ptr_(nullptr), deleter_(D()) {}
 
@@ -128,21 +143,24 @@ public:
 	uniquePtr(U p, typename std::enable_if<std::is_convertible<U, T*>::value, D&&>::type d) noexcept
 		: ptr_(p), deleter_(std::move(d)) {}
 
-	uniquePtr(uniquePtr&& u) noexcept : ptr_(u.ptr_), deleter_(std::move(u.deleter_)) {
+	uniquePtr(uniquePtr&& u) noexcept : ptr_(u.ptr_), deleter_(std::move(u.deleter_)) 
+	{
 		u.ptr_ = nullptr;
 	}
 
 	template <class U, class E>
 	uniquePtr(uniquePtr<U, E>&& u) noexcept : ptr_(u.release()), deleter_(std::move(u.get_deleter())) {}
 
-	~uniquePtr() {
+	~uniquePtr() 
+	{
 		reset();
 	}
 
 	uniquePtr& operator=(uniquePtr&& u) noexcept;
 
 	template <class U, class E>
-	uniquePtr& operator=(uniquePtr<U, E>&& u) noexcept {
+	uniquePtr& operator=(uniquePtr<U, E>&& u) noexcept 
+	{
 		reset(u.release());
 		deleter_ = std::move(u.get_deleter());
 		return *this;
@@ -154,7 +172,8 @@ public:
 	D& get_deleter() noexcept;
 	const D& get_deleter() const noexcept;
 
-	explicit operator bool() const noexcept {
+	explicit operator bool() const noexcept 
+	{
 		return ptr_ != nullptr;
 	}
 
@@ -174,105 +193,128 @@ private:
 };
 
 template <class T, class D>
-void uniquePtr<T[], D>::swap(uniquePtr& u) noexcept {
+void uniquePtr<T[], D>::swap(uniquePtr& u) noexcept 
+{
     std::swap(ptr_, u.ptr_);
     std::swap(deleter_, u.deleter_);
 }
 
 template <class T, class D>
-bool uniquePtr<T[], D>::operator==(std::nullptr_t) const {
+bool uniquePtr<T[], D>::operator==(std::nullptr_t) const 
+{
     return ptr_ == nullptr;
 }
 
 template <class T, class D>
-bool uniquePtr<T[], D>::operator!=(std::nullptr_t) const {
+bool uniquePtr<T[], D>::operator!=(std::nullptr_t) const 
+{
     return ptr_ == nullptr;
 }
 
 template <class T, class D>
-void uniquePtr<T[], D>::reset(nullptr_t) noexcept {
+void uniquePtr<T[], D>::reset(nullptr_t) noexcept 
+{
     reset();
 }
 
 template <class T, class D>
-void uniquePtr<T[], D>::reset(T* p) noexcept {
-    if (ptr_ != p) {
+void uniquePtr<T[], D>::reset(T* p) noexcept 
+{
+    if (ptr_ != p) 
+	{
         deleter_(ptr_);
         ptr_ = p;
     }
 }
 
 template <class T, class D>
-T* uniquePtr<T[], D>::release() noexcept {
+T* uniquePtr<T[], D>::release() noexcept 
+{
     T* p = ptr_;
     ptr_ = nullptr;
     return p;
 }
 
 template <class T, class D>
-const D& uniquePtr<T[], D>::get_deleter() const noexcept {
+const D& uniquePtr<T[], D>::get_deleter() const noexcept 
+{
     return deleter_;
 }
 
 template <class T, class D>
-D& uniquePtr<T[], D>::get_deleter() noexcept {
+D& uniquePtr<T[], D>::get_deleter() noexcept 
+{
     return deleter_;
 }
 
 template <class T, class D>
-uniquePtr<T[], D>& uniquePtr<T[], D>::operator=(uniquePtr<T[], D>&& u) noexcept {
+uniquePtr<T[], D>& uniquePtr<T[], D>::operator=(uniquePtr<T[], D>&& u) noexcept 
+{
     reset(u.release());
     deleter_ = std::move(u.deleter_);
     return *this;
 }
 
 template <class T, class D>
-uniquePtr<T[], D>& uniquePtr<T[], D>::operator=(nullptr_t) noexcept {
+uniquePtr<T[], D>& uniquePtr<T[], D>::operator=(nullptr_t) noexcept 
+{
     reset();
     return *this;
 }
 
 template <class T, class D>
-T& uniquePtr<T[], D>::operator[](size_t i) const {
+T& uniquePtr<T[], D>::operator[](size_t i) const 
+{
     return ptr_[i];
 }
 
 template <class T, class D>
-T* uniquePtr<T[], D>::get() const noexcept {
+T* uniquePtr<T[], D>::get() const noexcept 
+{
     return ptr_;
 }
 
 // Non-member swap function
 template <class T, class Del>
-void Swap(uniquePtr<T, Del>& lhs, uniquePtr<T, Del>& rhs) noexcept {
+void Swap(uniquePtr<T, Del>& lhs, uniquePtr<T, Del>& rhs) noexcept 
+{
 	lhs.swap(rhs);
 }
 
 // Make unique function
 template <class T, size_t N>
-uniquePtr<T[]> makeUnique() {
+uniquePtr<T[]> makeUnique() 
+{
 	return uniquePtr<T[]>(new T[N]);
 }
 
 template <class T, class... Args>
-uniquePtr<T> makeUnique(Args&&... args) {
+uniquePtr<T> makeUnique(Args&&... args) 
+{
 	return uniquePtr<T>(new T(std::forward<Args>(args)...));
 }
 
-class MyClass {
+class MyClass 
+{
 public:
-    MyClass() {
+    MyClass() 
+	{
         std::cout << "MyClass constructor called!" << std::endl;
     }
-    ~MyClass() {
+
+    ~MyClass() 
+	{
         std::cout << "MyClass destructor called!" << std::endl;
     }
-    void sayHello() {
+
+    void sayHello() 
+	{
         std::cout << "Hello, World!" << std::endl;
     }
 };
 
-int main() {
+int main() 
+{
     // Example 1: Managing a single object with uniquePtr
 
     std::cout << "Example 1:" << std::endl;
@@ -291,7 +333,8 @@ int main() {
     uniquePtr<MyClass[]> ptr2(new MyClass[3]);
 
     // Accessing the objects in the array and calling member functions
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i) 
+	{
         ptr2.get()[i].sayHello();
     }
 

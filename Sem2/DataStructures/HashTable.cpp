@@ -3,14 +3,16 @@
 #include <vector>
 #include <chrono>
 
-class Node {
+class Node 
+{
 public:
     std::string value;
     int key;
     Node(int key, std::string value):key(key),value(value){}
 };
 
-class HashTable {
+class HashTable 
+{
     Node** arr;//it has two pointers for using index and ->
     int capacity;
     int size;
@@ -20,12 +22,14 @@ public:
     std::vector<double> getTime;
     std::string colAmount;
     //basic constructor with basic capacity storage
-    HashTable(int capacity) : capacity(capacity), size(0) {
+    HashTable(int capacity) : capacity(capacity), size(0) 
+    {
         arr = new Node*[capacity];
         for (int i = 0; i < capacity; i++)
             arr[i] = NULL;
         deleted = new Node(-1, "None");
     }
+
     int hashFunc(int key);
     void insertNode(int key, std::string value);
     std::string deleteNode(int key);
@@ -36,20 +40,25 @@ public:
 
 };
 
-int HashTable::hashFunc(int key) {
+int HashTable::hashFunc(int key) 
+{
     return key % capacity;
 }
 
-void HashTable::insertNode(int key, std::string value) {
+void HashTable::insertNode(int key, std::string value) 
+{
     bool fl = false;
-    if (size == capacity) {
-        resize(); fl = true;
+    if (size == capacity) 
+    {
+        resize(); 
+        fl = true;
     }
 
     Node* temp = new Node(key, value);
     int index = hashFunc(key);
     
-    while (arr[index] != NULL && arr[index]->key != key && arr[index]->key != -1) {
+    while (arr[index] != NULL && arr[index]->key != key && arr[index]->key != -1) 
+    {
         index++;
         index%= capacity;
     }
@@ -59,17 +68,19 @@ void HashTable::insertNode(int key, std::string value) {
     arr[index] = temp;
 }
 
-std::string HashTable::deleteNode(int key) {
+std::string HashTable::deleteNode(int key) 
+{
     int index= hashFunc(key);
     int get_cap = capacity;
-    while (get_cap--) {
-        if (arr[index]->key == key) {
+    while (get_cap--) 
+    {
+        if (arr[index]->key == key) 
+        {
             Node* temp = arr[index];
             arr[index] = deleted;
             size--;
             return temp->value;
         }
-        
         index++;
         index%= capacity;
     }
@@ -77,17 +88,20 @@ std::string HashTable::deleteNode(int key) {
     return NULL;
 }
 
-std::string HashTable::get(int key) {
+std::string HashTable::get(int key) 
+{
     auto start = std::chrono::high_resolution_clock::now();
     int index= hashFunc(key);
     int counter = 0;
 
-    while (arr[index] != NULL) {
+    while (arr[index] != NULL) 
+    {
 
         if (counter++ > capacity)
             return NULL;
 
-        if (arr[index]->key == key) {
+        if (arr[index]->key == key) 
+        {
             auto end = std::chrono::high_resolution_clock::now();
             std::chrono::duration<double> duration = end - start;
 
@@ -101,9 +115,12 @@ std::string HashTable::get(int key) {
     }
 }
 
-std::vector<std::string>& HashTable::display() {
-    for (int i = 0; i < capacity; i++) {
-        if (arr[i] != NULL && arr[i]->key != -1) {
+std::vector<std::string>& HashTable::display() 
+{
+    for (int i = 0; i < capacity; i++) 
+    {
+        if (arr[i] != NULL && arr[i]->key != -1) 
+        {
             elems.push_back(std::to_string(arr[i]->key));
             elems.push_back(arr[i]->value);
         }
@@ -111,15 +128,19 @@ std::vector<std::string>& HashTable::display() {
     return elems;
 }
 
-void HashTable::show() {
-    for (int i = 0; i < capacity; i++) {
-        if (arr[i] != NULL && arr[i]->key != -1) {
+void HashTable::show() 
+{
+    for (int i = 0; i < capacity; i++) 
+    {
+        if (arr[i] != NULL && arr[i]->key != -1) 
+        {
             std::cout << arr[i]->key << " " << arr[i]->value << "\n";
         }
     }
 }
 
-void HashTable::resize() {
+void HashTable::resize() 
+{
     std::vector<std::string> elems1 = display();
     capacity = capacity * 2;
     delete[] arr;
@@ -132,7 +153,8 @@ void HashTable::resize() {
     int get_ind = 0;
     size = 0;
 
-    while (count != capacity / 2) {
+    while (count != capacity / 2) 
+    {
         insertNode(atoi(elems1[get_ind].c_str()), elems1[get_ind + 1]);
         ++count;
         get_ind += 2;

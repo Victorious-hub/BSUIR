@@ -1,63 +1,75 @@
 #include<iostream>
 
 template<class T>
-struct Node {
+struct Node 
+{
 	T data;
+
 	Node* next;
+	
 	Node(T n) :data(n), next(nullptr) {}
 };
 
 template<class T>
-class Stack {
+class Stack 
+{
 private:
 	Node<T>* top;
 public:
-	Stack() {
-        top = nullptr;
-    }
+	Stack() : top(nullptr) {}
+
 	void push(T data);
 	bool isEmpty();
 	int peek();
 	void pop();
 	void display();
-
 };
 
 template<class T>
-void Stack<T>::push(T data) {
+void Stack<T>::push(T data) 
+{
     Node<T>* temp = new Node<T>(data);
     temp->next = top;
     top = temp;
 }
 
 template<class T>
-bool Stack<T>::isEmpty() {
+bool Stack<T>::isEmpty() 
+{
 	return top == nullptr;
 }
 
 template<class T>
-int Stack<T>::peek() {
-    if (!isEmpty()){
+int Stack<T>::peek() 
+{
+    if (!isEmpty())
+	{
         return top->data;
-    } else {
+    } else 
+	{
         exit(1);
     }
 }
 
 template<class T>
-void Stack<T>::pop() {
+void Stack<T>::pop() 
+{
     Node<T>*  temp = top;
-    if (!temp) return;
+    if (!temp) 
+		return;
 
     top = top->next;
     delete temp;
 }
 
 template<class T>
-void Stack<T>::display() {
+void Stack<T>::display()
+{
     Node<T>* temp = top;
-    if (!temp) return;
-    while (temp) {
+    if (!temp) 
+		return;
+    while (temp) 
+	{
         std::cout << temp->data << "\n";
         temp = temp->next;
     }
