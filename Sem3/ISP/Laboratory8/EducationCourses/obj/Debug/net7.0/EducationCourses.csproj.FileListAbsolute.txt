@@ -1,0 +1,12 @@
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\bin\Debug\net7.0\EducationCourses.deps.json
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\bin\Debug\net7.0\EducationCourses.dll
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\bin\Debug\net7.0\EducationCourses.pdb
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\EducationCourses.csproj.AssemblyReference.cache
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\EducationCourses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\EducationCourses.AssemblyInfoInputs.cache
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\EducationCourses.AssemblyInfo.cs
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\EducationCourses.csproj.CoreCompileInputs.cache
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\EducationCourses.dll
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\refint\EducationCourses.dll
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\EducationCourses.pdb
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba8\EducationCourses\obj\Debug\net7.0\ref\EducationCourses.dll

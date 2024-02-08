@@ -1,0 +1,15 @@
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\bin\Debug\net7.0\2535202_Shyshko_Laba3.exe
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\bin\Debug\net7.0\2535202_Shyshko_Laba3.deps.json
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\bin\Debug\net7.0\2535202_Shyshko_Laba3.runtimeconfig.json
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\bin\Debug\net7.0\2535202_Shyshko_Laba3.dll
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\bin\Debug\net7.0\2535202_Shyshko_Laba3.pdb
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\2535202_Shyshko_Laba3.csproj.AssemblyReference.cache
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\2535202_Shyshko_Laba3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\2535202_Shyshko_Laba3.AssemblyInfoInputs.cache
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\2535202_Shyshko_Laba3.AssemblyInfo.cs
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\2535202_Shyshko_Laba3.csproj.CoreCompileInputs.cache
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\2535202_Shyshko_Laba3.dll
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\refint\2535202_Shyshko_Laba3.dll
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\2535202_Shyshko_Laba3.pdb
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\2535202_Shyshko_Laba3.genruntimeconfig.cache
+C:\Users\Asus\RiderProjects\2535202_Shyshko_Laba3\2535202_Shyshko_Laba3\obj\Debug\net7.0\ref\2535202_Shyshko_Laba3.dll

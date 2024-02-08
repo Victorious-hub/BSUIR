@@ -1,0 +1,15 @@
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\bin\Debug\net7.0\253502_Laboratory_2_Shyshko.exe
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\bin\Debug\net7.0\253502_Laboratory_2_Shyshko.deps.json
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\bin\Debug\net7.0\253502_Laboratory_2_Shyshko.runtimeconfig.json
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\bin\Debug\net7.0\253502_Laboratory_2_Shyshko.dll
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\bin\Debug\net7.0\253502_Laboratory_2_Shyshko.pdb
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\253502_Laboratory_2_Shyshko.csproj.AssemblyReference.cache
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\253502_Laboratory_2_Shyshko.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\253502_Laboratory_2_Shyshko.AssemblyInfoInputs.cache
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\253502_Laboratory_2_Shyshko.AssemblyInfo.cs
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\253502_Laboratory_2_Shyshko.csproj.CoreCompileInputs.cache
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\253502_Laboratory_2_Shyshko.dll
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\refint\253502_Laboratory_2_Shyshko.dll
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\253502_Laboratory_2_Shyshko.pdb
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\253502_Laboratory_2_Shyshko.genruntimeconfig.cache
+C:\Users\Asus\RiderProjects\253502_Laboratory_2_Shyshko\253502_Laboratory_2_Shyshko\obj\Debug\net7.0\ref\253502_Laboratory_2_Shyshko.dll

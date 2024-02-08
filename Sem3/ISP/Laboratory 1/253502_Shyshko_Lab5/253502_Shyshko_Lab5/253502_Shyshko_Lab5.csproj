@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>_253502_Shyshko_Lab5</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+
+
+    <ItemGroup>
+      <Compile Remove="Collections\Custom.cs" />
+      <Compile Remove="Interfaces\CustomCollection.cs" />
+      <Compile Remove="Contracts\Airport.cs" />
+    </ItemGroup>
+
+
+
+
+
+</Project>

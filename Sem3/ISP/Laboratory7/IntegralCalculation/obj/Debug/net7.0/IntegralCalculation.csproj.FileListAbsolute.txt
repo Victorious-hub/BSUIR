@@ -1,0 +1,12 @@
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\bin\Debug\net7.0\IntegralCalculation.deps.json
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\bin\Debug\net7.0\IntegralCalculation.dll
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\bin\Debug\net7.0\IntegralCalculation.pdb
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\IntegralCalculation.csproj.AssemblyReference.cache
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\IntegralCalculation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\IntegralCalculation.AssemblyInfoInputs.cache
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\IntegralCalculation.AssemblyInfo.cs
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\IntegralCalculation.csproj.CoreCompileInputs.cache
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\IntegralCalculation.dll
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\refint\IntegralCalculation.dll
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\IntegralCalculation.pdb
+C:\Users\Asus\RiderProjects\253502_Shyshko_Laba7\IntegralCalculation\obj\Debug\net7.0\ref\IntegralCalculation.dll

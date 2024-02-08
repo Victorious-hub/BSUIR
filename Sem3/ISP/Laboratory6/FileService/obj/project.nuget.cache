@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cq+cTi80118BdaWo8nAG0hZ9dUs0usGtoGd9UCYd0J1hzl+u0KZo1FNV27c640rPv/xmDW8djl0pzBiH8B9FXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Asus\\RiderProjects\\253502_Shyshko_Laba6\\FileService\\FileService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
