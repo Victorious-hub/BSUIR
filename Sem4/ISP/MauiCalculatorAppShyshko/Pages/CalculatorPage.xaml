@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalculatorAppShyshko.CalculatorPage"
+             Title="CalculatorPage">
+
+    <Grid Padding="8" 
+          RowSpacing="4" 
+          ColumnSpacing="4"
+          RowDefinitions="250,70,70,70,70,70,70"
+          ColumnDefinitions="*,*,*,*"
+          BackgroundColor="White">
+
+        <Label x:Name="currentNumber"
+             FontSize="25" FontAttributes="Bold" Text=""
+             HorizontalTextAlignment="End"
+             HeightRequest="30"
+             TextColor="{StaticResource Light}"
+             LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+
+        <Label x:Name="resultText"
+             FontSize="40" FontAttributes="Bold" Text="0"
+             HorizontalTextAlignment="End"
+             VerticalTextAlignment="End"
+             TextColor="{StaticResource Light}"
+             LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
+
+
+        <BoxView BackgroundColor="{StaticResource LightGray}" HeightRequest="1"
+             Grid.Row="0" VerticalOptions="End"
+             Grid.ColumnSpan="4"/>
+
+        <Button Text="%" Grid.Row="1" Grid.Column="0"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnPercentage"/>
+
+
+        <Button Text="AC" Grid.Row="1" Grid.Column="1"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnClear"/>
+
+
+        <Button Text="log(x)" Grid.Row="1" Grid.Column="2"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnLogCalculation"/>
+
+
+        <Button Text="⌫" Grid.Row="1" Grid.Column="3"
+                BackgroundColor="#2D2C2C" 
+                FontSize="20"
+                Clicked="OnDeleteSymbol"/>
+
+
+        <Button Text="1/x" Grid.Row="2" Grid.Column="0"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnFraction"/>
+
+        <Button Text="x²" Grid.Row="2" Grid.Column="1"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnSquareDegree"/>
+
+        <Button Text="√x" Grid.Row="2" Grid.Column="2"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnSquareRoot"/>
+
+
+        <Button Text="÷" Grid.Row="2" Grid.Column="3"
+                BackgroundColor="#2D2C2C" 
+                FontSize="20"
+                Clicked="OnSelectOperator"/>
+
+        <Button Text="7" Grid.Row="3" Grid.Column="0"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="8" Grid.Row="3" Grid.Column="1"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="9" Grid.Row="3" Grid.Column="2"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="×" Grid.Row="3" Grid.Column="3"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnSelectOperator"/>  
+
+        <Button Text="4" Grid.Row="4" Grid.Column="0"
+                BackgroundColor="#373635" 
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="5" Grid.Row="4" Grid.Column="1"
+            BackgroundColor="#373635"
+            FontSize="20"
+            Clicked="Calculation"/>
+
+        <Button Text="6" Grid.Row="4" Grid.Column="2"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="-" Grid.Row="4" Grid.Column="3"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnSelectOperator"/>
+
+        <Button Text="1" Grid.Row="5" Grid.Column="0"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="2" Grid.Row="5" Grid.Column="1"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="3" Grid.Row="5" Grid.Column="2"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="+" Grid.Row="5" Grid.Column="3"
+                BackgroundColor="#2D2C2C"
+                FontSize="20"
+                Clicked="OnSelectOperator"/>
+
+        <Button Text="00" Grid.Row="6" Grid.Column="0"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="0" Grid.Row="6" Grid.Column="1"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="." Grid.Row="6" Grid.Column="2"
+                BackgroundColor="#373635"
+                FontSize="20"
+                Clicked="Calculation"/>
+
+        <Button Text="=" Grid.Row="6" Grid.Column="3"
+                BackgroundColor="#EC6C07" 
+                FontSize="20"
+                Clicked="OnCalculate"/>
+    </Grid>
+
+</ContentPage>

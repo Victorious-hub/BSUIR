@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiCalculatorAppShyshko.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiCalculatorAppShyshko"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutHeaderBehavior="Fixed" 
+    FlyoutVerticalScrollMode="Auto"
+    Title="MauiCalculatorAppShyshko">
+
+    <FlyoutItem Title="HomePage" Icon="home.png">
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="CalculatorPage" Icon="calculator.png">
+        <ShellContent
+            Title="Calculator"
+            ContentTemplate="{DataTemplate local:CalculatorPage}"
+            Route="CalculatorPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="ProgressDemo" Icon="progress.png">
+        <ShellContent
+            Title="ProgressBar"
+            ContentTemplate="{DataTemplate local:ProgressDemoPage}"
+            Route="ProgressDemoPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="SQLiteDemo" Icon="db.png">
+        <ShellContent
+            Title="Object's list"
+            ContentTemplate="{DataTemplate local:SQLitePage}"
+            Route="SQLitePage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="CurrencyConvertor" Icon="currency.png">
+        <ShellContent
+            Title="Currency"
+            ContentTemplate="{DataTemplate local:CurrencyConverterPage}"
+            Route="CurrencyConverterPage" />
+    </FlyoutItem>
+</Shell>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiCalculatorAppShyshko.PopupPage">
+
+    <VerticalStackLayout Spacing="5">
+        <Label 
+            x:Name="popupText"
+            Text="You didn't start you task!"
+            VerticalOptions="Center" 
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <HorizontalStackLayout Spacing="30" HorizontalOptions="CenterAndExpand">
+
+            <Button Text="Close" x:Name="btnClose" Clicked="onClickClose" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+    
+    
+    
+</toolkit:Popup>
